@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const Button = (props) => {
+   return (
+   <React.Fragment>
+      <button type={props.type}>Submit</button>
+   </React.Fragment>
+   );
 }
+
+const Input = () => {
+   return (
+      <React.Fragment>
+      <h1>Fitness Progress Tracker</h1>
+      <form method='post' action='#'>
+         <input type='text' placeHolder="Enter Weight" />
+         <input type='text' placeHolder="Enter Body fat %" />
+         <Button type="submit"/>
+      </form>
+      </React.Fragment>
+   )
+}
+
+function App() {
+   return (
+      <React.Fragment>
+      <Input />
+      </React.Fragment>
+      );
+   }
 
 export default App;
