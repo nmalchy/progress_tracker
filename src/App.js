@@ -35,7 +35,7 @@ function Input(props) {
    }
 
    const handleToggle = () => {
-      if (toggle == false) {
+      if (toggle === false) {
          setToggle(true);
       } else {
          setToggle(false);
@@ -46,8 +46,8 @@ function Input(props) {
       <>
       <h1>Fitness Progress Tracker</h1>
          <form onSubmit={handleSubmit} method='post'>
-            <input value={weight} type='text' placeHolder="Enter Weight" onChange={e => setWeight(e.target.value)} />
-            <input value={bodyFat} type='text' placeHolder="Enter Body Fat %" onChange={e => setBf(e.target.value)}/>
+            <input value={weight} type='text' placeholder="Enter Weight" onChange={e => setWeight(e.target.value)} />
+            <input value={bodyFat} type='text' placeholder="Enter Body Fat %" onChange={e => setBf(e.target.value)}/>
             <Button type="submit" text='Submit'/>
             <Button type="button" text='Show Personal Data' onClick={handleToggle}/>
             {success === true && <h5>Your data has been logged!</h5>}
