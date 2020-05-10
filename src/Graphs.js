@@ -28,13 +28,15 @@ const Graph = () => {
       setChartData({
          labels: dateArr,
          datasets: [{
+               label: 'Weight (lb)',
                data: weightArr,
-               backgroundColor: ["rgba(75, 192, 192, 0.6)"],
+               backgroundColor: ["rgba(0, 10, 255, 0.6)"],
                borderWidth: 4,
                yAxisID: 'left-y-axis'
             }, {
+               label: 'Body Fat (%)',
                data: bfArr,
-               backgroundColor: ["rgba(75, 192, 192, 0.6)"],
+               backgroundColor: ["rgba(255, 10, 10, 0.6)"],
                borderWidth: 4,
                yAxisID: 'right-y-axis'
             }]
@@ -55,12 +57,13 @@ const Graph = () => {
          scales: {
             yAxes: [
                      {
+                     title: 'noah',
                      type: 'linear',
                      display: true,
                      position: 'left',
                      id: 'left-y-axis',
                      labels: {
-                        show: true
+                        show: false
                      },
                      ticks: {
                         beginAtZero: true
