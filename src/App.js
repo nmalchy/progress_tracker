@@ -7,7 +7,7 @@ import Graph from './Graphs';
 const Button = (props) => {
    return (
    <>
-      <button type={props.type} onClick={props.onClick}>{props.text}</button>
+      <button type={props.type} className={props.className} onClick={props.onClick}>{props.text}</button>
    </>
    );
 }
@@ -48,8 +48,9 @@ function Input(props) {
          <form onSubmit={handleSubmit} method='post'>
             <input value={weight} type='text' placeholder="Enter Weight" onChange={e => setWeight(e.target.value)} />
             <input value={bodyFat} type='text' placeholder="Enter Body Fat %" onChange={e => setBf(e.target.value)}/>
-            <Button type="submit" text='Submit'/>
-            <Button type="button" text='Show Personal Data' onClick={handleToggle}/>
+            <div>&nbsp;</div>
+            <Button type="submit" className="btn btn-background-circle" text='Submit'/>
+            <Button type="button" className="btn btn-background-circle" text='Show Personal Data' onClick={handleToggle}/>
             {success === true && <h5>Your data has been logged!</h5>}
             {toggle === true && <Graph />}
          </form>
